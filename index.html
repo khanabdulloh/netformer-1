@@ -226,16 +226,6 @@ img,svg,canvas{max-width:100%}.q,.fb,.op{overflow-wrap:anywhere}.term{overflow-x
 .lvup{position:fixed;left:50%;top:38%;z-index:70;transform:translate(-50%,-50%);text-align:center;font:400 clamp(30px,9vw,54px) "Russo One",Orbitron,sans-serif;color:var(--y);text-shadow:0 0 28px var(--y);pointer-events:none;animation:lvp 2.2s both}
 .lvup small{display:block;font:700 15px Orbitron,sans-serif;letter-spacing:.3em;color:var(--t)}@keyframes lvp{0%{opacity:0;transform:translate(-50%,-30%) scale(.5)}15%{opacity:1;transform:translate(-50%,-50%) scale(1.08)}80%{opacity:1}100%{opacity:0;transform:translate(-50%,-70%)}}
 @media(max-width:520px){.grid .cd{width:90%}}
-
-/* ===== SINOPSIS & JALUR ===== */
-.eyb{font:700 11px Orbitron,sans-serif;letter-spacing:.28em;color:var(--g);text-transform:uppercase;margin:0 0 8px}
-.syn h3,.nxt h3{font-size:clamp(18px,4.2vw,24px);margin:0 0 8px;color:var(--t)}.syn p,.nxt p{margin:0 0 12px;color:var(--m);max-width:68ch}
-.chp{display:flex;flex-wrap:wrap;gap:8px}.chp span{font-size:12px;font-weight:600;padding:6px 12px;border-radius:99px;border:1px solid var(--ln);color:var(--c);background:color-mix(in srgb,var(--bg) 50%,transparent)}
-.nxt{position:relative;overflow:hidden;border-color:color-mix(in srgb,var(--c) 55%,var(--ln))!important;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 16%,var(--pn)),var(--pn) 65%)!important}
-.nxt::before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;pointer-events:none;background:radial-gradient(closest-side,color-mix(in srgb,var(--g) 30%,transparent),transparent)}.nxt>*{position:relative}
-.rt{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 16px}.rt a,.rt b{font:700 12px Orbitron,sans-serif;letter-spacing:.06em;padding:7px 12px;border-radius:10px;border:1px solid var(--ln);color:var(--m);text-decoration:none}.rt a:hover{border-color:var(--c);color:var(--t)}
-.rt b{color:var(--ink);background:linear-gradient(135deg,var(--c),var(--g));border-color:transparent}.rt i{width:18px;height:2px;background:var(--ln);border-radius:2px}
-.stt{font-size:13px;color:var(--y);margin:14px 0}.nxt .btn,.cta .btn{display:inline-block;text-decoration:none}
 </style>
 </head>
 <body>
@@ -422,54 +412,30 @@ const _done=done;done=function(){_done();const win=G.l>0,h=H(),b=$('.big');if(!b
 home();
 })();
 </script>
-<script>(()=>{
-const IC={"🧮": "<rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1.5\"/><path d=\"M14 17.5h7M17.5 14v7\"/>", "🐧": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"3\"/><path d=\"M7 9l3 3-3 3M13 15h4\"/>", "🧭": "<circle cx=\"12\" cy=\"12\" r=\"2.5\"/><circle cx=\"12\" cy=\"4.5\" r=\"1.8\"/><circle cx=\"5\" cy=\"17.5\" r=\"1.8\"/><circle cx=\"19\" cy=\"17.5\" r=\"1.8\"/><path d=\"M12 6.3v3.2M6.5 16.5l3.5-2.8M17.5 16.5l-3.5-2.8\"/>", "📶": "<path d=\"M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.6 16a5 5 0 0 1 6.8 0M12 19.5h.01\"/>", "🗄": "<rect x=\"3\" y=\"3.5\" width=\"18\" height=\"7\" rx=\"2\"/><rect x=\"3\" y=\"13.5\" width=\"18\" height=\"7\" rx=\"2\"/><path d=\"M7 7h.01M7 17h.01M12 7h5M12 17h5\"/>", "👑": "<path d=\"M3.5 18.5l-1-11 5.5 4.5L12 5l4 7 5.5-4.5-1 11z\"/><path d=\"M6 21h12\"/>", "🕵": "<path d=\"M2 12s3.7-7 10-7 10 7 10 7-3.7 7-10 7S2 12 2 12z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>", "🔍": "<circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6\"/>", "🔐": "<rect x=\"4.5\" y=\"10.5\" width=\"15\" height=\"10\" rx=\"2.5\"/><path d=\"M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2.5\"/>", "🎭": "<path d=\"M4 5h16v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9z\"/><path d=\"M8.5 10.5h2M13.5 10.5h2M9 15c1.7 1.3 4.3 1.3 6 0\"/>", "🕸": "<circle cx=\"12\" cy=\"12\" r=\"2.5\"/><circle cx=\"5\" cy=\"6\" r=\"1.8\"/><circle cx=\"19\" cy=\"6\" r=\"1.8\"/><circle cx=\"5\" cy=\"18\" r=\"1.8\"/><circle cx=\"19\" cy=\"18\" r=\"1.8\"/><path d=\"M6.4 7.2l4 3.6M17.6 7.2l-4 3.6M6.4 16.8l4-3.6M17.6 16.8l-4-3.6\"/>", "💀": "<path d=\"M12 3a8 8 0 0 0-5 14.2V20h10v-2.8A8 8 0 0 0 12 3z\"/><circle cx=\"9\" cy=\"11.5\" r=\"1.4\"/><circle cx=\"15\" cy=\"11.5\" r=\"1.4\"/><path d=\"M10.5 20v-2M13.5 20v-2\"/>", "🔒": "<rect x=\"5\" y=\"11\" width=\"14\" height=\"9.5\" rx=\"2.5\"/><path d=\"M8.5 11V8a3.5 3.5 0 0 1 7 0v3\"/>", "🌐": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18\"/>", "🖥": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"12\" rx=\"2.5\"/><path d=\"M8 20h8M12 16v4\"/>", "🧬": "<path d=\"M12 3l9 5-9 5-9-5z\"/><path d=\"M3 12l9 5 9-5M3 16.5l9 5 9-5\"/>", "🎯": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><circle cx=\"12\" cy=\"12\" r=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"1\"/>", "📡": "<circle cx=\"12\" cy=\"10\" r=\"2\"/><path d=\"M7.5 5.5a6.4 6.4 0 0 0 0 9M16.5 5.5a6.4 6.4 0 0 1 0 9M4.5 3a10.5 10.5 0 0 0 0 14M19.5 3a10.5 10.5 0 0 1 0 14M12 12l-3 9M12 12l3 9M9.5 18h5\"/>", "🛡": "<path d=\"M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z\"/><path d=\"M8.5 12l2.5 2.5L15.5 10\"/>", "🦠": "<circle cx=\"12\" cy=\"12\" r=\"5\"/><path d=\"M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M10.5 11h.01M13.5 13h.01\"/>", "🕷": "<ellipse cx=\"12\" cy=\"13\" rx=\"3.5\" ry=\"4.5\"/><circle cx=\"12\" cy=\"7.5\" r=\"1.8\"/><path d=\"M8.5 11L3 8M8.5 13.5L3 14M9 16l-4 4M15.5 11L21 8M15.5 13.5l5.5.5M15 16l4 4\"/>", "🤖": "<rect x=\"4.5\" y=\"8\" width=\"15\" height=\"11\" rx=\"3\"/><circle cx=\"12\" cy=\"4\" r=\"1\"/><path d=\"M12 8V5M9.5 13.5h.01M14.5 13.5h.01M9 16.5h6M2.5 12.5v3M21.5 12.5v3\"/>", "👻": "<path d=\"M5 20V11a7 7 0 0 1 14 0v9l-2.3-2-2.4 2-2.3-2-2.3 2-2.4-2z\"/><path d=\"M9.5 11h.01M14.5 11h.01\"/>", "🐉": "<path d=\"M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.5 1 2.3 2 2.5-.5-3 .3-5.5 1-8z\"/>"},keys=Object.keys(IC).join('|');
-const sv=k=>'<svg class="ni" viewBox="0 0 24 24" aria-hidden="true">'+IC[k]+'</svg>';
-function sw(){document.querySelectorAll('.ic,.mdl i,.eb,.vs span,#ey span').forEach(el=>{if(el.dataset.s||el.children.length)return;const t=el.textContent.replace(/\uFE0F/g,'');const r=new RegExp(keys,'g');if(!r.test(t))return;el.innerHTML=t.replace(new RegExp(keys,'g'),sv);el.dataset.s=1})}
-new MutationObserver(sw).observe(document.body,{childList:true,subtree:true});sw();
-let mute=false;try{mute=localStorage.getItem('nf_mute')=='1'}catch(e){}
-let ac;const tn=(f,t,d,v)=>{try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();const o=ac.createOscillator(),g=ac.createGain(),s=ac.currentTime+t;o.type='triangle';o.frequency.value=f;g.gain.setValueAtTime(v||.07,s);g.gain.exponentialRampToValueAtTime(.001,s+d);o.connect(g);g.connect(ac.destination);o.start(s);o.stop(s+d)}catch(e){}};
-const vib=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
-const play=a=>{if(mute)return;a.forEach(([f,t,d])=>tn(f,t,d))};
-const b=document.createElement('button');b.id='snd';b.type='button';
-const ico=()=>{b.innerHTML='<svg class="ni" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/>'+(mute?'<path d="M16 9.5l5 5M21 9.5l-5 5"/>':'<path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/>')+'</svg>';b.title=mute?'Suara mati':'Suara hidup';b.setAttribute('aria-label',b.title)};
-ico();b.onclick=()=>{mute=!mute;try{localStorage.setItem('nf_mute',mute?'1':'0')}catch(e){}ico();play([[660,0,.1]])};document.body.appendChild(b);
-const _f=fin;fin=function(q,good){_f(q,good);if(good){play([[660,0,.1],[880,.09,.16]]);vib(14)}else{play([[220,0,.2],[165,.12,.26]]);vib([40,30,40])}};
-const _d=done;done=function(){_d();if(G.l>0){play([[523,0,.14],[659,.13,.14],[784,.26,.14],[1047,.4,.34]]);vib([20,40,20,40,60])}else play([[330,0,.2],[262,.18,.2],[196,.36,.4]])};
-})();</script>
-<script>(()=>{
-const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const hud=document.createElement('div');hud.id='hud2';document.body.appendChild(hud);
-const fx=document.createElement('div');fx.id='fx';document.body.appendChild(fx);
-let pl=null;
-function lvup(l){const e=document.createElement('div');e.className='lvup';e.innerHTML='LEVEL UP!<small>LV '+l+'</small>';document.body.appendChild(e);setTimeout(()=>e.remove(),2200)}
-function uh(){if(typeof S=='undefined'||!S.hero){hud.style.display='none';return}
- const x=xp(),lv=Math.floor(x/200)+1,p=(x%200)/2;hud.style.display='flex';
- hud.innerHTML='<span class="hv">'+esc(S.hero.av)+'</span><div class="hm"><b>'+esc(S.hero.n)+'</b><i>LV '+lv+'</i><div class="hx"><u style="width:'+p+'%"></u></div></div>';
- if(pl!==null&&lv>pl)lvup(lv);pl=lv}
-function tune(){document.querySelectorAll('.grid .cd').forEach(c=>c.classList.remove('cur'));
- const a=[...document.querySelectorAll('.grid .cd:not(:disabled)')].filter(c=>!/★/.test((c.querySelector('.st')||{}).textContent||''));if(a[0])a[0].classList.add('cur');
- const h=document.querySelector('.intro h2');if(h&&!h.previousElementSibling&&document.getElementById('st')&&typeof G!='undefined'&&G&&G.m)h.insertAdjacentHTML('beforebegin','<div class="kick">'+(G.i==M.length-1?'BOSS BATTLE':'MISI 0'+(G.i+1))+'</div>')}
-let q=0;new MutationObserver(r=>{if(q||r.every(m=>hud.contains(m.target)))return;q=requestAnimationFrame(()=>{q=0;uh();tune()})}).observe(document.body,{childList:true,subtree:true});uh();tune();
-function fl(g){fx.className=g?'g':'r';void fx.offsetWidth;fx.className=(g?'g':'r')+' on';if(!g){document.body.classList.remove('shk');void document.body.offsetWidth;document.body.classList.add('shk');setTimeout(()=>document.body.classList.remove('shk'),450)}}
-const _f2=fin;fin=function(a,g){_f2(a,g);fl(g)};
-const _d2=done;done=function(){_d2();const e=document.querySelector('div[style*="letter-spacing:6px"]');if(e){const n=(e.textContent.match(/★/g)||[]).length;e.innerHTML=[0,1,2].map(i=>'<span class="stp'+(i<n?' on':'')+'" style="animation-delay:'+(.35+i*.25)+'s">★</span>').join('')}setTimeout(uh,80)};
-if(!matchMedia('(prefers-reduced-motion:reduce)').matches){const c=document.createElement('canvas');c.id='pf';document.body.prepend(c);const x=c.getContext('2d');let w,h,P=[];
- const rs=()=>{w=c.width=innerWidth;h=c.height=innerHeight;P=Array.from({length:Math.min(46,w/18|0)},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.8+.4,v:Math.random()*.35+.1}))};rs();addEventListener('resize',rs);
- (function f(){x.clearRect(0,0,w,h);x.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--g').trim()||'#22d3ee';P.forEach(p=>{p.y-=p.v;if(p.y<-4){p.y=h+4;p.x=Math.random()*w}x.globalAlpha=.2+p.r/5;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill()});requestAnimationFrame(f)})()}
-})();</script>
-<script>(()=>{
-const C={"cur": 0, "st": "Bangkitkan Kota Digital", "sp": "Virus Boot melumpuhkan inti sistem Kota Digital. Sebagai Rekrut, kamu menyalakan kembali komputer, menyusun ulang jaringan, membongkar tujuh lapisan OSI, melacak alamat IP, dan memulihkan sinyal, hingga menghadapi Firewall Titan di pertempuran terakhir.", "sc": ["Kelas X · Dasar TJKT", "6 misi", "25 tantangan", "5–10 menit per misi"], "ne": "Level berikutnya", "nt": "NETFORMER 2: Level Lanjutan", "np": "Setelah fondasi kokoh, saatnya berpindah dari memahami jaringan menjadi mengelolanya. Kamu akan menempa subnet, mengetik perintah Linux di terminal, mengonfigurasi router, memulihkan sinyal nirkabel, dan menjaga server hingga menghadapi Cyber Overlord.", "nc": ["Subnetting & CIDR", "Terminal Linux", "VLAN, NAT & Router", "WiFi & Fiber Optik", "Server & Cloud"], "bt": "Lanjut ke NETFORMER 2 ▶", "bu": "https://claude.ai/artifact/KDMdCWsuyQERgbiMSmqjnu"},U=["https://claude.ai/artifact/5bJQZMT5ac2kH2DiJymi6T", "https://claude.ai/artifact/KDMdCWsuyQERgbiMSmqjnu", "https://claude.ai/artifact/9wAxWCSf7JqjUy3cCThe9V"],N=["1 · Pengantar","2 · Lanjutan","3 · ZERO DAY"];
-const chips=a=>'<div class="chp">'+a.map(x=>'<span>'+x+'</span>').join('')+'</div>';
-const route=()=>'<div class="rt">'+N.map((n,i)=>(i==C.cur?'<b>'+n+'</b>':'<a href="'+U[i]+'" target="_blank" rel="noopener">'+n+'</a>')).join('<i></i>')+'</div>';
-function inj(){if(!document.querySelector('.bar')||!document.querySelector('.grid'))return;
- const hero=document.querySelector('.hero'),ft=document.querySelector('.ft');
- if(hero&&!document.getElementById('syn'))hero.insertAdjacentHTML('afterend','<div class="box syn" id="syn"><p class="eyb">Sinopsis</p><h3>'+C.st+'</h3><p>'+C.sp+'</p>'+chips(C.sc)+'</div>');
- if(ft&&!document.getElementById('nxt')){const n=Object.keys(S.st).length,all=n>=M.length;
-  const stt=C.bu?'<p class="stt">'+(all?'Semua misi tuntas. Kamu siap melangkah ke level berikutnya!':'Selesaikan '+(M.length-n)+' misi lagi untuk menuntaskan level ini.')+'</p><a class="btn" href="'+C.bu+'" target="_blank" rel="noopener">'+C.bt+'</a>':'';
-  ft.insertAdjacentHTML('beforebegin','<div class="box nxt" id="nxt"><p class="eyb">'+C.ne+'</p>'+route()+'<h3>'+C.nt+'</h3><p>'+C.np+'</p>'+chips(C.nc)+stt+'</div>')}}
-let q=0;new MutationObserver(()=>{if(!q)q=requestAnimationFrame(()=>{q=0;inj()})}).observe(document.body,{childList:true,subtree:true});inj();
-if(C.bu){const _d3=done;done=function(){_d3();if(G.l>0&&M.every(m=>S.st[m.id])){const b=document.querySelector('.box');if(b)b.insertAdjacentHTML('beforeend','<p class="cta" style="margin:16px 0 0"><a class="btn" href="'+C.bu+'" target="_blank" rel="noopener">'+C.bt+'</a></p>')}}}
-})();</script>
+<script>
+/* ================================================================
+   TAMBAHAN NAVIGASI KE LEVEL 2
+   Muncul otomatis setelah semua misi tuntas.
+   ================================================================ */
+(()=>{
+  const L2_URL = 'https://khanabdulloh.github.io/netformer-2/';
+  const obs = new MutationObserver(() => {
+    const big = document.querySelector('.big');
+    if (!big || big.dataset.l2) return;
+    if (!/TRANSFORMASI BERHASIL/.test(big.textContent)) return;
+    const box = big.closest('.box');
+    if (!box || !/Semua misi tuntas/.test(box.textContent)) return;
+    big.dataset.l2 = '1';
+    const hm = box.querySelector('#hm');
+    if (!hm) return;
+    const wrap = document.createElement('p');
+    wrap.style.margin = '20px 0 0';
+    wrap.innerHTML = '<button class="btn" id="nx2" type="button">LANJUT KE LEVEL 2 ▶</button>';
+    hm.parentNode.appendChild(wrap);
+    wrap.querySelector('#nx2').onclick = () => { location.href = L2_URL; };
+  });
+  obs.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
 </body>
 </html>
